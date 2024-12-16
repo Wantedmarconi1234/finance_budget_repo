@@ -17,7 +17,7 @@ if (!process.env.PORT_NUMBER || !process.env.MONGOOSE_URI) {
 }
 
 // Connect to the database
-mongoose.connect(process.env.MONGOOSE_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGOOSE_URI)
     .then(() => {
         console.log('Connected to database successfully');
 

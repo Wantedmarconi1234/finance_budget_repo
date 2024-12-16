@@ -3,7 +3,8 @@ const {
     getAllExpenses, 
     getSingleExpense,
     editExpense,
-    deleteExpense
+    deleteExpense,
+    createExpense
 } = require('../controllers/ExpenseController')
 
 const router = express.Router()
@@ -16,9 +17,7 @@ router.get('/expense/:id', getSingleExpense)
  
 
 //create a new budget
-router.post('/expense', (req, res) => {
-    res.status(200).json({message: "create a expense"})
-})
+router.post('/expense', createExpense)
 
 //edit a budget
 router.put('/expense/:id', editExpense)
